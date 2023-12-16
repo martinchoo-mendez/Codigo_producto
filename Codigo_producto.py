@@ -10,6 +10,8 @@
 #Se nos pide realizar un programa que, dado el nombre de un producto, genere su respectivo código.
 #Por ejemplo, si el usuario ingresa: "tomates triturados", un código posible sería: TMe853*.
 
+import random
+
 producto=input("por favor, ingrese el nombre del producto: ")
 consonantes="bcdfghjklmnñpqrstvwxyzBCDFGHJKLMNÑPQRSTVWXYZ"
 vocales="aeiouAEIOU"
@@ -30,4 +32,9 @@ for char in con_producto:
     if c<=2:
         código+=char.upper()
     c+=1
-print(código) #primer print, solo para verificar que el código tome las dos vocales.
+#print(código) #primer print, solo para verificar que el código tome las dos vocales.
+    
+#ahora, agrego una vocal aleatoria
+vocal=random.choice(voc_producto)
+código+=vocal.lower()
+print(código) #otro print para verificar.
