@@ -18,8 +18,16 @@ voc_producto=""
 código=""
 
 #Primero, separamos el producto en consonantes y vocales
-for char in palabra:
+for char in producto:
     if char in consonantes:
         con_producto+=char
     else:
         voc_producto+=char
+
+#ahora, tomamos las dos consonantes para ponerlas en el código
+c=1
+for char in con_producto:
+    if c<=2:
+        código+=char.upper()
+    c+=1
+print(código) #primer print, solo para verificar que el código tome las dos vocales.
