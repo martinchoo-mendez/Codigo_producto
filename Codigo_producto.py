@@ -9,3 +9,17 @@
 
 #Se nos pide realizar un programa que, dado el nombre de un producto, genere su respectivo código.
 #Por ejemplo, si el usuario ingresa: "tomates triturados", un código posible sería: TMe853*.
+
+producto=input("por favor, ingrese el nombre del producto: ")
+consonantes="bcdfghjklmnñpqrstvwxyzBCDFGHJKLMNÑPQRSTVWXYZ"
+vocales="aeiouAEIOU"
+con_producto=""
+voc_producto=""
+código=""
+
+#Primero, separamos el producto en consonantes y vocales
+for char in palabra:
+    if char in consonantes:
+        con_producto+=char
+    else:
+        voc_producto+=char
