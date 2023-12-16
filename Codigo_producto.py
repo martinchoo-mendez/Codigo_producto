@@ -8,7 +8,7 @@
 #y en caso contrario, debe ser un "#"
 
 #Se nos pide realizar un programa que, dado el nombre de un producto, genere su respectivo código.
-#Por ejemplo, si el usuario ingresa: "tomates triturados", un código posible sería: TMe853*.
+#Por ejemplo, si el usuario ingresa: "tomates triturados", un código posible sería: TMe853#.
 
 import random
 
@@ -37,4 +37,17 @@ for char in con_producto:
 #ahora, agrego una vocal aleatoria
 vocal=random.choice(voc_producto)
 código+=vocal.lower()
-print(código) #otro print para verificar.
+#print(código) #otro print para verificar.
+
+#agregamos un número random entre 100 y 999
+número=random.randint(100, 999)
+código+=str(número)
+#print(código) #print para verificar.
+
+#por último, agregamos "*" o "#", según la cantidad de carateres.
+cant_caracteres=len(producto)
+if cant_caracteres%2!=0:
+    código+="*"
+else:
+    código+="#"
+print(código) #este print es el importante, y el único que debe quedar.
